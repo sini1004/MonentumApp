@@ -14,6 +14,8 @@ function deleteToDo(event){
     const li = event.target.parentElement;
     li.remove();
     toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+    //toDo는 toDos에 있는 DB에 있는 요소 중 하나.
+    //내가 클릭한 li.id와는 다른 toDo는 남기고싶음.
     saveToDos();   
 }
 
